@@ -1,16 +1,16 @@
 import string
-def main():
+import io
+def main(file=[]):
     chars = list(string.ascii_letters)
-    i = input()
     r = 0
-    while i != "e":
-        i1 = i[:len(i)//2]
-        i2 = i[len(i)//2:]
+    for line in file:
+        i1, i2 = line[:len(line)//2], line[len(line)//2:]
         s = list(filter(lambda x: x in i1, i2))[0]
         n = chars.index(s) + 1
         r += n
-        i = input()
     print(r)
 
 if __name__ == "__main__":
-    main()
+    with io.open("input.txt", "r") as f:
+        file = f.readlines()
+    main(file)
