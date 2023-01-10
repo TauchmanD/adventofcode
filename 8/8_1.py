@@ -4,7 +4,6 @@ import io
 
 
 def main(file=[]):
-    print(sys.argv)
     trees = [[int(char) for char in line if char != "\n"] for line in file]
     v = 0
     end = len(trees)-1
