@@ -29,12 +29,6 @@ def main(file=[]):
                 seen.append((tx,ty))
     print(len(seen))
 
-def sign(n: int):
-    if n > 0:
-        return 1
-    elif n < 0:
-        return -1
-    return 0
 
 if __name__ == "__main__":
     with io.open(sys.argv[1], "r") as f:
