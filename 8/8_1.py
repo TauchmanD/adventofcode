@@ -19,6 +19,9 @@ def main(file=[]):
             u = column[:i]
             if t > max(r) or t > max(u) or t > max(d) or t > max(l):
                 v += 1
+                print(t)
+                print(r)
+                print(i, j)
     v += len(trees) * 4 - 4
     print(v)
 
